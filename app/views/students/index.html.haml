@@ -1,18 +1,21 @@
 .wrapper
   .header
     .title
-      Room-inous
+      TEC-English
     .button#admin-img
-      -# = link_to image_tag("room.png", alt: "admin-image", id="admin-img"), 'https://google.com'
       =link_to 'https://google.com'do
         =image_tag 'room.png',class: 'admin-img' 
   .main-content
     .buttons
       .button
-        .button__enter
-        
+        =link_to 'https://google.com', class: "btn" do
+          .button__enter
+            in
+
       .button
-        .button__exit
+        =link_to 'https://google.com', class: "btn" do
+          .button__exit
+            out
         
 
 
