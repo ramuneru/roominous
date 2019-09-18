@@ -1,8 +1,29 @@
 .wrapper
   .main-content
     .search__box
-      -# = form_tag(oranges_path, method: :post) do
-      -#   生徒
+      %input{placeholder:"search your name"}
+    .students
+      .students__listbox
+        .students__listbox__block 
+          %p 退室中
+          -@students.each do |s|
+            .students__listbox__block__row 
+              .students__listbox__block__row__image
+                = image_tag "#{s.image}", class: "student_image"
+              .students__listbox__block__row__name
+                = s.name
+
+
+        .students__listbox__block
+          %p 入室中
+          -@students.each do |s|
+            .students__listbox__block__row 
+              .students__listbox__block__row__image
+                = image_tag "#{s.image}", class: "student_image"
+              .students__listbox__block__row__name
+                = s.name
+              
+
 
 
 

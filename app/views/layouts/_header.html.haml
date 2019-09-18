@@ -1,0 +1,20 @@
+.header
+  .main-title
+    =link_to "/" do
+      TEC-English
+      
+  .admin-box
+    .admin-box__button
+    - if admin_signed_in?
+      .log-in-box
+        = link_to  destroy_admin_session_path, method: :delete do
+          =image_tag 'room.png',class: 'admin-img'
+
+    - else
+      .log-in-box
+        = link_to new_admin_session_path, class: 'post' do
+          -# =image_tag 'room.png',class: 'admin-img'
+          ログイン
+        = link_to new_admin_registration_path, class: 'post' do
+          -# =image_tag 'room.png',class: 'admin-img'
+          新規登録

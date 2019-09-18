@@ -2,6 +2,7 @@ class StudentsController < ApplicationController
   before_action :authenticate_admin!
 
   def index
+    @students = Student.order("name ASC").limit(10)
   end
 
   def new
