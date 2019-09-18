@@ -1,8 +1,14 @@
 @import "./reset";
+@import "./header";
+@import "./main";
 @import "./students";
-@import 'font-awesome';
+@import "./time_cards";
+@import "./admin/admin";
+
+
+// @import 'font-awesome';
 // @import "./config/colors";
-// @import "./messages/chat_main";
+
 // @import "./messages/chat_side";
 // @import "./modules/group";
 // @import "./modules/user";

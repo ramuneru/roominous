@@ -1,0 +1,41 @@
+.wrapper {
+  margin: 0 auto;
+  text-align: center;
+  background-image: url('library.jpg');
+  width: 100%;
+  height: 100vh;
+}
+
+.ad-title {
+  background-color: white;
+  font-size: 5vw;
+  color: red;
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid skyblue;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.ad-sub-title{
+  margin: 0 auto;
+  font-size:30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid lightgrey;
+  width: 20%;
+  background-color: white;
+}
+
+.form{
+  width: 70vw;
+  height: 65vh;
+  background-color: white;
+  margin: 0 auto;
+  opacity: 0.92;
+  &__box {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+}

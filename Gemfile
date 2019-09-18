@@ -67,3 +67,7 @@ gem 'sprockets', '3.7.2'
 
 gem 'bootstrap', '~> 4.1.1'
 gem 'haml-rails'
+
+gem 'devise'
+
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'

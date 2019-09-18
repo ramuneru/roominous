@@ -1,0 +1,31 @@
+.wrapper
+  .ad-title
+    Administrator
+  .ad-sub-title
+    Sign-up
+  
+  .form
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .form__box
+        = f.label :name
+        %br/
+        =f.text_field :name, autofocus: true
+      .form__box
+        = f.label :email
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email"
+      .form__box
+        = f.label :password
+        - if @minimum_password_length
+          %em
+            (#{@minimum_password_length} characters minimum)
+        %br/
+        = f.password_field :password, autocomplete: "new-password"
+      .form__box
+        = f.label :password_confirmation
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "new-password"
+      .actions
+        = f.submit "Sign up"
+    = render "devise/shared/links"

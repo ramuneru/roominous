@@ -1,0 +1,55 @@
+* { 
+  box-sizing: border-box;
+}
+
+.main-content {
+  background-image: url("whale.jpg");
+  background-size: cover;
+	width: 100%;
+  height: calc(100vh - 120px);
+  padding: 60px;
+  .buttons {
+    display: flex;
+    margin: 0 auto;
+    .button{
+      width: 100%;
+      height: 100%;
+      opacity: 0.9;
+      .btn {
+        text-decoration: none;
+      }
+        
+      &__student{
+        width: 50vh;
+        height: 50vh;
+        background-color: white;
+        border-radius: 200px;
+      }
+      &__guest{
+        width: 35vh;
+        height: 35vh;
+        background-color: white;
+        border-radius:200px;
+      }
+      &__etc{
+        width: 20vh;
+        height: 20vh;
+        background-color: white;
+        border-radius:200px;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+footer {
+	width: 100%;
+	height: 10vh;
+	background-color: lightgrey;
+  p {
+    size: 12px;
+    color: grey;
+    text-align: center;
+    line-height: 50px;
+  }
+}

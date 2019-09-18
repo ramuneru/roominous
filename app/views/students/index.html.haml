@@ -1,25 +1,30 @@
 .wrapper
-  .header
-    .title
-      TEC-English
-    .button#admin-img
-      =link_to 'https://google.com'do
-        =image_tag 'room.png',class: 'admin-img' 
   .main-content
-    .buttons
-      .button
-        =link_to 'https://google.com', class: "btn" do
-          .button__enter
-            in
-
-      .button
-        =link_to 'https://google.com', class: "btn" do
-          .button__exit
-            out
-        
+    .search__box
+      -# = form_tag(oranges_path, method: :post) do
+      -#   生徒
 
 
-          
-            
+
+
+
+
+
+
   %footer
     %p copyright: Ramuneru.inc
+
+    -# .buttons
+    -#   .button
+    -#     =link_to @student, class: "btn" do
+    -#       .button__student
+    -#         Student
+
+    -#   .button
+    -#     =link_to 'https://google.com', class: "button" do
+    -#       .button__guest
+    -#         Guest
+    -#     .button
+    -#       =link_to 'https://google.com', class: "button" do
+    -#         .button__etc
+    -#           Etc
