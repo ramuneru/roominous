@@ -1,32 +1,38 @@
- /* === ボタンを表示するエリア ============================== */
- .sample7Area {
-  margin         : auto;                /* 中央寄せ           */
-  width          : 70px;                /* ボタンの横幅       */
+.fab {
+  display: block;
+  width: 56px;
+  height: 56px;
+  text-align: center;
+  border-radius: 50%;
+  transition: .2s;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
+} 
+#plus{
+  background: #fab732;
 }
- 
- /* === チェックボックス ==================================== */
-.sample7Area input[type="checkbox"] {
-  display        : none;            /* チェックボックス非表示 */
+#lock{
+  background: #4169e1;
 }
- 
- /* === チェックボックスのラベル（標準） ==================== */
-.sample7Area label {
-  display        : block;               /* ボックス要素に変更 */
-  box-sizing     : border-box;          /* 枠線を含んだサイズ */
-  border         : 2px solid #aaa;      /* 枠線(一旦四方向)   */
-  border-radius  : 35px;                /* 角丸               */
-  height         : 70px;                /* ボタンの高さ       */
-  background     : #bbb;                /* 背景               */
-  transition     : .5s;                 /* 滑らか変化         */
+#male{
+  background: #008080;
 }
- 
- /* === チェックボックスのラベル（ONの時） ================== */
-.sample7Area #sample7check:checked + label {
-  background     : #78bd78;             /* 背景色             */
+
+.fab i {
+color: white;
+line-height: 56px;
+font-size: 18px;
+transition: .2s;
 }
- 
- /* === ラベル内の画像（標準） ============================== */
-.sample7Area label img{
-  display        : block;               /* ブロック化         */
-  margin         : 6px auto auto auto;  /* 上は6pxで中央寄せ  */
+#lock.fab:hover {
+background:#dc143c;/*背景色を変更*/
+box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);/*浮き上がる*/}
+
+.fab:hover i {
+-webkit-transform: rotate(360deg);
+transform: rotate(360deg);/*回転角度*/
+}
+
+#lock.fab:hover .fa:before {
+// content: '\f13e';/*変更後のアイコン*/
+content: '\f023';
 }

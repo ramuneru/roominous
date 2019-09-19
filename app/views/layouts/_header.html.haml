@@ -1,20 +1,26 @@
 .header
   .main-title
-    =link_to "/" do
+    =link_to "/" , id:"main-title" do
       TEC-English
       
   .admin-box
     .admin-box__button
     - if admin_signed_in?
-      .log-in-box
-        = link_to  destroy_admin_session_path, method: :delete do
-          =image_tag 'room.png',class: 'admin-img'
+      .log-in-buttons
+        .button__plus
+          = link_to "/students/new", id:"plus", class:"fab", alt: "ログアウト"  do
+            %i.fa.fa-plus
+        .button__lock
+          =link_to destroy_admin_session_path, id:"lock", class:"fab", method: :delete do
+            %i.fa.fa-unlock-alt
 
     - else
-      .log-in-box
-        = link_to new_admin_session_path, class: 'post' do
-          -# =image_tag 'room.png',class: 'admin-img'
-          ログイン
-        = link_to new_admin_registration_path, class: 'post' do
-          -# =image_tag 'room.png',class: 'admin-img'
-          新規登録
+      .log-in-buttons
+        .button__male
+          = link_to new_admin_registration_path, id:"male", class:"fab" do
+            %i.fa.fa-male
+        .button__lock
+          = link_to new_admin_session_path, id:"lock", class:"fab" do
+            %i.fa.fa-lock
+          -# = link_to  destroy_admin_session_path, method: :delete do
+          -# =image_tag 'room.png',class: 'admin-img'  

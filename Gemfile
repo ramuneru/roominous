@@ -70,4 +70,5 @@ gem 'haml-rails'
 
 gem 'devise'
 
+gem "font-awesome-rails"
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'

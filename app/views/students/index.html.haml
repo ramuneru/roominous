@@ -1,51 +1,18 @@
-.wrapper
-  .main-content
-    .search__box
-      %input{placeholder:"search your name"}
-    .students
-      .students__listbox
-        .students__listbox__block 
-          %p 退室中
-          -@students.each do |s|
-            .students__listbox__block__row 
-              .students__listbox__block__row__image
-                = image_tag "#{s.image}", class: "student_image"
-              .students__listbox__block__row__name
-                = s.name
+.main-content
+  .search__box
+    %input{placeholder:"search your name"}
+  %p 退室中
+  .students__listbox
+    .f-container 
+      -@students.each do |s|
+        .f-block 
+          .f-image
+            = image_tag "#{s.image}", class: "student_image"
+          .f-name
+            = s.name
 
 
-        .students__listbox__block
-          %p 入室中
-          -@students.each do |s|
-            .students__listbox__block__row 
-              .students__listbox__block__row__image
-                = image_tag "#{s.image}", class: "student_image"
-              .students__listbox__block__row__name
-                = s.name
-              
-
-
-
-
-
-
-
-
-
-  %footer
-    %p copyright: Ramuneru.inc
-
-    -# .buttons
-    -#   .button
-    -#     =link_to @student, class: "btn" do
-    -#       .button__student
-    -#         Student
-
-    -#   .button
-    -#     =link_to 'https://google.com', class: "button" do
-    -#       .button__guest
-    -#         Guest
-    -#     .button
-    -#       =link_to 'https://google.com', class: "button" do
-    -#         .button__etc
-    -#           Etc
+    .f-container
+   
+%footer
+  %p copyright: Ramuneru.inc

@@ -3,21 +3,33 @@
 	height: 70px;
 	background-color: white;
   
-  .main-title {
+  #main-title {
     font-size: 40px;
     color: skyblue;
     height: 70px;
     line-height: 70px;
-    padding-left: 40px;
+    padding-left: 20px;
     float: left;
     text-decoration: none;
   }
 
-  .log-in-box {
-    display: block;
+  .log-in-buttons {
+    display: flex;
     width: 150px;
     height: 70px;
     float: right;
+    .button__plus{
+      margin-top: 5px;  
+      margin-left: 10px;
+    }
+    .button__lock{
+      margin-top: 5px;  
+      margin-left: 10px;
+    }
+    .button__male{
+      margin-top: 5px;  
+      margin-left: 10px;
+    }
     .admin-img {
       width: 50px;
       height: auto;

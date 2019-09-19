@@ -1,9 +1,19 @@
-.form
-  = form_for @student do |f|
-    =f.label :name, "Student Name:"
-    = f.text_field :name
+.regi-content
+  .title
+    .title__admin
+      管理者用
+    .title__menu
+      生徒登録画面
 
-    =f.label :image, "Icon Image:"
-    = f.text_field :name
+  .form
+    = form_for @student do |f|
+      .form__name
+        = f.label :name, "Name:"
+        = f.text_field :name, autofocus: true
 
-    = f.submit "Send"
+      .form__image
+        = f.label :image, "Icon-image:"
+        = f.text_field :image, autofocus: true
+
+      .form__button
+        = f.submit "登録", class: "form_btn"

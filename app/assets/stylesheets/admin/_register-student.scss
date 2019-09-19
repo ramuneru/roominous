@@ -1,0 +1,41 @@
+.regi-content{
+  text-align: center;
+}
+
+.title{
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: 40vw;
+  height: auto;
+  &__admin{
+    border-bottom: 2px solid grey;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  &__menu {
+    font-size: 20px;
+    color: navy;
+  }
+}
+
+.form {
+  padding-top: 10px;
+  text-align: center;
+    &__name{
+    margin-bottom: 20px;  
+    }  
+    &__image{
+      margin-bottom: 20px; 
+      input[type="text"] {
+        width: 500px;
+        height: 30px;
+      }
+    }
+    &__button{
+    text-align: center;
+    }
+    .actions{
+      margin: 0 auto;
+      width: 30%;
+    }
+}
