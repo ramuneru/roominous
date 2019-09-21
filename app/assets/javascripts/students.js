@@ -1,22 +1,33 @@
 $(function(){
-  //①マウスオーバー、マウスアウト
-  $('.buttons').on("mouseover", ".button__student", function(){
-    $(this).css({"background-color": "orange"});
-  }).on("mouseout", ".button__student", function(){
-    $(this).css({"background-color": "white"})
-  }).on("mouseover", ".button__guest", function(){
-    $(this).css({"background-color": "skyblue"});
-  }).on("mouseout", ".button__guest", function(){
-    $(this).css({"background-color": "white"})
-  }).on("mouseover", ".button__etc", function(){
-    $(this).css({"background-color": "pink"});
-  }).on("mouseout", ".button__etc", function(){
-    $(this).css({"background-color": "white"})
-  })
+  //student画像のappend用
+  // function buildHTML(image) {
+  //   let html = `<div class='f-block'>
+  //                 <div class="f-image"><img src: "${image}"></div> 
+  //               </div>`
+  //   return html
+  // }
+
+  // $('.f-container').on("click", ".f-block", function(){
+  //   $(this).buildHTML();
+  // }).on("mouseout", ".f-block", function(){
+  //   $(this).css();
+  // })
+
+  $(function(){
+    $(".f-block").draggable({
+      containment: '.students__listbox',
+      scroll: false,
+    })
+       
+    $("#drop_area").droppable({
+      drop: function(ev, ui) {
+        // ドロップされたDraggable要素を追加
+        ui.draggable.appendTo(this);
+      }
 
 
+    });
 
+  });
 
-});  
-  
-  
+}); 

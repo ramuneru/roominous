@@ -4,15 +4,15 @@
   .students-condition
     退室中
   .students__listbox
-    .f-container#drag_area
+    .f-container#student-image{ ondragover: "f_dragover(event)", ondrop:"f_drop(event)"} 
       -@students.each do |student|
-        .f-block
+        .f-block#image-student.id{draggable: "true", ondragstart: f_dragstart(event)}
           .f-image
             = image_tag "#{student.image}",id: "#{student.id}", class: "student_image"
-          .f-name
-            = student.name
+          -# .f-name
+          -#   = student.name
 
-    .f-container#drop_area
+    .f-container#dropbox{ondragover: f_dragover(event), ondrop: f_drop(event)}
       
    
 %footer
