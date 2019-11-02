@@ -66,7 +66,7 @@ gem 'jquery-ui-rails'
 gem 'pry-rails'
 gem 'sprockets', '3.7.2'
 
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 gem 'haml-rails'
 
 gem 'devise'
